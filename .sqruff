@@ -1,2 +1,7 @@
+# See:
+# - rules:    https://github.com/quarylabs/sqruff/blob/main/docs/rules.md
+# - defaults: https://github.com/quarylabs/sqruff/blob/main/crates/lib/src/core/default_config.cfg
+
 [sqruff]
 dialect = postgres
+max_line_length = 120

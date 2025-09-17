@@ -37,4 +37,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "Quary.sqruff",
   },
+  "files.associations": {
+    ".sqruff": "properties",
+  },
 }
