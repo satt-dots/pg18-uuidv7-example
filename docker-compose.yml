@@ -18,5 +18,18 @@ services:
       timeout: 10s
       retries: 3
 
+  dbmate:
+    image: amacneil/dbmate:2
+    container_name: dbmate
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    volumes:
+      - ./db:/db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles:
+      - migration
+
 volumes:
   postgres_data:

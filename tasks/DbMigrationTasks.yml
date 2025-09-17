@@ -1,0 +1,56 @@
+version: "3"
+
+vars:
+  DBMATE_BASE_CMD: docker compose --profile migration run --rm dbmate
+
+tasks:
+  run:
+    desc: Run database migrations
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} migrate"
+
+  rollback:
+    desc: Rollback the last migration
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} rollback"
+
+  status:
+    desc: Show migration status
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} status"
+
+  new:
+    desc: Create a new migration file
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} new {{.CLI_ARGS}}"
+    requires:
+      vars: [CLI_ARGS]
+
+  dump:
+    desc: Dump database schema
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} dump"
+
+  wait:
+    desc: Wait for database to be ready
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} wait"
+
+  drop:
+    desc: Drop the database
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} drop"
+    prompt: This will drop the entire database. Are you sure?
+
+  create:
+    desc: Create the database
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} create"
+
+  reset:
+    desc: Drop, create, and migrate the database
+    cmds:
+      - "{{.DBMATE_BASE_CMD}} drop"
+      - "{{.DBMATE_BASE_CMD}} create"
+      - "{{.DBMATE_BASE_CMD}} migrate"
+    prompt: This will reset the entire database. Are you sure?

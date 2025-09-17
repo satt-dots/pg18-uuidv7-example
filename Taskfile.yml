@@ -10,6 +10,7 @@ includes:
   md: tasks/MarkdownTasks.yml
   gh: tasks/GitHubTasks.yml
   pg: tasks/PgTasks.yml
+  dm: tasks/DbMigrationTasks.yml
 
 tasks:
   default:
