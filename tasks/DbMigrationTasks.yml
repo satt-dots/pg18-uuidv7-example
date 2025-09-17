@@ -23,6 +23,8 @@ tasks:
     desc: Create a new migration file
     cmds:
       - "{{.DBMATE_BASE_CMD}} new {{.CLI_ARGS}}"
+      - echo "Change owner of the created migration file to the current user..."
+      - sudo chown $USER:$USER db/migrations/*.sql
     requires:
       vars: [CLI_ARGS]
 
