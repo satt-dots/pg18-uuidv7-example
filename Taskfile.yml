@@ -6,6 +6,7 @@ includes:
   json: tasks/JsonTasks.yml
   md: tasks/MarkdownTasks.yml
   gh: tasks/GitHubTasks.yml
+  pg: tasks/PgTasks.yml
 
 tasks:
   default:

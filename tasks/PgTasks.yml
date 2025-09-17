@@ -1,0 +1,27 @@
+version: "3"
+
+tasks:
+  up:
+    desc: "Start PostgreSQL 18 container"
+    cmds:
+      - docker compose up -d postgres
+
+  down:
+    desc: "Stop PostgreSQL 18 container"
+    cmds:
+      - docker compose down
+
+  down:v:
+    desc: "Stop PostgreSQL 18 container"
+    cmds:
+      - docker compose down -v
+
+  logs:
+    desc: "Show PostgreSQL 18 container logs"
+    cmds:
+      - docker compose logs -f postgres
+
+  ps:
+    desc: "Show PostgreSQL 18 container status"
+    cmds:
+      - docker compose ps -a postgres
