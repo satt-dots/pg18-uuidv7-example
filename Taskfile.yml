@@ -11,6 +11,7 @@ includes:
   gh: tasks/GitHubTasks.yml
   pg: tasks/PgTasks.yml
   dm: tasks/DbMigrationTasks.yml
+  sql: tasks/SqlTasks.yml
 
 tasks:
   default:
@@ -45,5 +46,6 @@ tasks:
       - json:check
       - md:check
       - gh:check
+      - sql:check
     aliases:
       - c

@@ -31,4 +31,10 @@
 
   // Dictionary for spell checker
   "cSpell.words": ["shellcheck", "Taskfile"],
+
+  // SQL
+  "[sql]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Quary.sqruff",
+  },
 }

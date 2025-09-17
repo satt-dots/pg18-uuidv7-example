@@ -1,0 +1,18 @@
+version: "3"
+
+tasks:
+  check:
+    desc: "Check SQL"
+    cmds:
+      - task: fix
+      - task: lint
+
+  lint:
+    desc: "Lint SQL"
+    cmds:
+      - sqruff lint .
+
+  fix:
+    desc: "Lint SQL and fix issues"
+    cmds:
+      - sqruff fix .
