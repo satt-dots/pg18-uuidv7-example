@@ -25,3 +25,8 @@ tasks:
     desc: "Show PostgreSQL 18 container status"
     cmds:
       - docker compose ps -a postgres
+
+  psql:
+    desc: "Access PostgreSQL 18 container"
+    cmds:
+      - docker compose exec postgres psql "$DATABASE_URL"

@@ -1,5 +1,8 @@
 version: "3"
 
+env:
+  DATABASE_URL: postgres://postgres:password@postgres:5432/testdb?sslmode=disable
+
 includes:
   mise: tasks/MiseTasks.yml
   yml: tasks/YamlTasks.yml
