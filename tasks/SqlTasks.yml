@@ -1,6 +1,16 @@
 version: "3"
 
 tasks:
+  setup:
+    desc: "Setup SQL tools"
+    cmds:
+      - curl -fsSL https://raw.githubusercontent.com/quarylabs/sqruff/main/install.sh | bash
+
+  versions:
+    desc: "Show SQL tool versions"
+    cmds:
+      - sqruff --version
+
   check:
     desc: "Check SQL"
     cmds:

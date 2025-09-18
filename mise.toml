@@ -13,8 +13,5 @@ biome = "latest"
 actionlint = "latest"
 shellcheck = "latest"
 
-# SQL
-"cargo:sqruff" = "latest"
-
 # Others
 fzf = "latest"

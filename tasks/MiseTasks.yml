@@ -17,4 +17,3 @@ tasks:
       - markdownlint --version
       - biome --version
       - actionlint --version
-      - sqruff --version
