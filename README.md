@@ -2,25 +2,39 @@
 
 ## 使い方
 
-1. PostgreSQL サーバーを起動する。
+### 前提
+
+- [Taskfile](https://taskfile.dev) がインストールされていること。
+- [mise](https://mise.jdx.dev) がインストールされていること。
+- [Docker](https://www.docker.com) がインストールされていること。
+
+### クイックスタート
+
+1. ツールをセットアップする。
+
+    ```bash
+    task setup
+    ```
+
+2. PostgreSQL サーバーを起動する。
 
     ```bash
     task pg:up
     ```
 
-2. DB マイグレーションを実行する。
+3. DB マイグレーションを実行する。
 
     ```bash
     task dm:run
     ```
 
-3. サーバーに接続する。
+4. サーバーに接続する。
 
     ```bash
     task pg:psql
     ```
 
-4. テーブル一覧を表示する。
+5. テーブル一覧を表示する。
 
     ```psql
     testdb=# \dt
@@ -32,7 +46,7 @@
      (2 rows)
     ```
 
-5. ランダムな UUIDv7 の値を生成する。
+6. ランダムな UUIDv7 の値を生成する。
 
     ````psql
     testdb=# select uuidv7();
